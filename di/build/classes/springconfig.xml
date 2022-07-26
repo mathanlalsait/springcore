@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC
+    "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org./dtd/spring-beans.dtd">
+<beans>
+   
+
+<bean id="nwriter" class="MySpringBeanWithDependency">
+	<property name="writermem" ref="writer1" />
+</bean>
+
+<bean id="writer" class="MySpringBeanWithDependency">
+	<property name="writermem" ref="writer2" />
+</bean>
+
+
+<bean id="writer1" class="NiceWriter" />
+
+<bean id="writer2" class="Writer" />
+
+</beans>

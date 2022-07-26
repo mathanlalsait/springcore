@@ -1,0 +1,3 @@
+ If you run the application then the class for the IWriterInterface will be inserted into the Test class. By applying the dependency injecting I can later replace this writer with a more sophisticated writer.
+
+As a result the class Test does not depend on the concrete Writer class, is extensible and can be easily tested.
