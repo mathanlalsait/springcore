@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC
+    "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org./dtd/spring-beans.dtd">
+    
+<beans>
+	<bean id="mybean" class="Student" singleton="false">
+		<constructor-arg>
+			<value>mathan</value>		
+		</constructor-arg>
+				
+		<property name="age">
+			<value>25</value>
+		</property>
+		
+		<property name="company">
+			<value>C I T</value>
+		</property>
+		
+		<property name="email">
+			<value>mathanlalsait@gmail.com</value>
+		</property>
+		
+		<property name="address" ref="add">
+		</property>
+		
+		<property name="courses">
+			<list>
+				<value>Java</value>
+				<value>.net</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="add" class="Address">
+		<property name="street">
+			<value>kkkkkkkkkkk</value>
+		</property>
+	</bean>
+</beans> 
